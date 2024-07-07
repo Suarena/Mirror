@@ -1,0 +1,191 @@
+/* 顶端栏 */
+			.top {
+				width: 1450px;	/* 原定100% */
+				height: 50px;
+				position: fixed;
+				cursor:url('指针.png'),auto;
+				z-index: 3;
+				left: 1%;
+			}
+			.top div {
+				position: fixed;
+			}
+			.top ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    border: 0px solid #e7e7e7;
+				/* background-color: #f3f3f3; */	/* 导航栏背景颜色 */
+				background: url(导航栏.png);
+			}
+			
+			.top li {
+			    float: left;
+				cursor:url('指针.png'),auto;
+			}
+			
+			.top li a {
+			    display: block;
+			    color: #e6e6e6; /* 原值#666 */
+			    text-align: center;
+			    padding: 14px 16px;
+			    text-decoration: none;
+				cursor:url('指针.png'),auto;
+			}
+			
+			.top li a:hover:not(.active) {
+			    background-color: #e3e3e3; /* 原值#ddd */
+			}
+			.top li a:hover{
+				color: #aa5500;
+			} /* 鼠标悬停颜色 */
+			
+			.top li a.active {
+			    color: white;
+			    background-color: #4CAF50;
+			} /* 没啥用 */
+			
+			.top img{
+				position: relative;
+				left: 30%;
+				margin: auto;
+				margin: 10px 150px 0 50;
+			}
+		/* 顶端栏右侧窗口 */
+			.tr {
+				position: absolute;
+				left: 85%;
+			}
+			.tl {
+				position: absolute;
+				left: 75%;
+			}
+/* 分菜单 */
+			.drop 
+	
+/* Mirror logo 控制整体图片排版，之前是控制logo用的，不知道为啥写成了整体排版，干脆就摆烂了，很重要，不能删*/
+			/* img{
+				position: relative;
+				left: 50%;
+				margin: auto;
+				margin: 10px 50px 0 50;
+			} */
+			img{}
+/* 版心 */	
+			.continer{
+				width: 1100px; /* 1200px */
+				height: 1400px; /* 1800px */
+				background-image: url(版心背景3.png);
+				margin-top: 360px;
+				margin: 0 auto;
+				/* margin: 0 auto; */
+			}
+			.continer ul{
+				list-style: none;
+				display: flex;
+				position: relative;
+				left: 10%;
+				top: -6%;
+				z-index: 2;
+			}
+			.continer p{
+				left: 10%;
+				margin: 0px 0 0 5px ;
+			}
+			.continer ul li{
+				text-align: center;
+				width: 100px;
+				height: 50px;
+				display: block;
+				color: #d9d9d9; /* 板块文字颜色 */
+				text-align: center;
+				text-decoration: none;
+				list-style-type: none;
+			}
+			.continer li a {
+			    display: block;
+			    color: #d9d9d9;
+			    text-align: center;
+			    text-decoration: none;
+				cursor:url('指针.png'),auto;
+			}
+			.continer li a:hover{
+				color: #a5d630;
+			}
+			
+/* 背景框 */
+			.bord {
+				width: 500px;
+				height: 80px;
+				list-style: none;
+				display: flex;
+				position: relative;
+				right: -10%;
+				top: -106%;
+				z-index: 1;
+			}
+		/* 右侧部分 */
+			.bord2 {
+				width: 160px;
+				height: 50px;
+				list-style: none;
+				display: flex;
+				position: relative;
+				top: -125%;
+				right: -68%;
+				z-index: 1;
+				float: none;
+			}
+			
+			.bord3 {
+				width: 160px;
+				height: 50px;
+				list-style: none;
+				display: flex;
+				position: relative;
+				top: -126%;
+				right: -68%;
+				z-index: 1;
+				float: none;
+			}
+			
+			.bord4 {
+				width: 160px;
+				height: 50px;
+				list-style: none;
+				display: flex;
+				position: relative;
+				top: -127%;
+				right: -68%;
+				z-index: 1;
+				float: none;
+			}
+			
+			.bord5 {
+				width: 160px;
+				height: 50px;
+				list-style: none;
+				display: flex;
+				position: relative;
+				top: -128%;
+				right: -68%;
+				z-index: 1;
+				float: none;
+			}
+/* 流动图片 */
+			.pho {
+				width: 600px;
+				height: 350px;
+				list-style: none;
+				display: flex;
+				position: relative;
+				top: -103%;
+				right: -11%;
+				z-index: 1;
+			}
+			
+			dl {
+				display: none;
+			}
+			:target {display: block;}
