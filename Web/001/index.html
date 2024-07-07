@@ -1,121 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>小孙同学</title>
-    <meta name="language" content="zh-CN">
-    <meta name="title" content="小孙同学">
-    <meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
-    <meta name="describe" content="收集不易，您的star是我坚持的动力，同时也欢迎各位PR哦! ">
-    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            background-color: pink;
-
-        }
-
-        #frame {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            margin: 250px auto;
-        }
-
-        .left,
-        .right {
-            top: 0;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        .left {
-            left: 35px;
-
-        }
-
-        .right {
-            right: 35px;
-            z-index: -1;
-        }
-
-        .bottom {
-            bottom: 36px;
-            left: 100px;
-            width: 200px;
-            height: 200px;
-            transform: rotate(45deg);
-            z-index: -1;
-
-        }
-
-        .heart {
-            position: absolute;
-            box-shadow: 0 0 40px #d5093c;
-            animation: beat .4s ease infinite normal;
-            background: linear-gradient(-90deg, #F50A45 0%, #d5093c 40%);
-        }
-
-        @keyframes beat {
-            0% {
-                transform: scale(1) rotate(225deg);
-                box-shadow: 0 0 40px #d5093c;
-            }
-
-            50% {
-                transform: scale(1.1) rotate(225deg);
-                box-shadow: 0 0 70px #d5093c;
-            }
-
-            100% {
-                transform: scale(1) rotate(225deg);
-                box-shadow: 0 0 40px #d5093c;
-                ;
-            }
-        }
-
-        .word {
-            position: absolute;
-            width: 50%;
-            top: 75%;
-            left: 25%;
-            text-align: center;
-            transform: translateY(-50%);
-            font-family: 'Love Ya Like A Sister', cursive;
-            font-size: 40px;
-            color: #c70012;
-            padding: 0 20px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="nes.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/rightmenu.css">
+    <link rel="stylesheet" href="func.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/more.js"></script>
+    
 </head>
-
 <body>
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top d-flex" >
+        <!-- logopic -->
+         <div class="d-flex justify-content-end" style="width: 200px;">
+            <img src="images/mirrorcity.png" alt="" style="width: 170px;" class="d-flex justify-content-end">
+         </div>
+        
+        <!-- 折叠 -->
+        <button class="navbar-toggler nes-btn is-normal is-small mr-3" style="width: 30px; height: 30px;" type="button" data-toggle="collapse" data-target="#navbar">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <i class="nes-icon close is-small" style="position: relative; left: 5px; top: -3px;"></i>
+        </button>
 
-    <div id="frame">
-        <div class="heart left"></div>
-        <div class="heart right"></div>
-        <div class="heart bottom"></div>
-    </div>
-
-    <b class="word">每次遇见你都心跳加速!</b>
-
-    <audio autoplay="autopaly" loop="loop" id="audios" preload="auto">
-        <source src="http://music.163.com/song/media/outer/url?id=526464145.mp3" />
-    </audio>
-
-    <script>
-        var b = document.body;
-        var c = document.getElementsByTagName('canvas')[0];
-        var a = c.getContext('2d');
-        document.body.clientWidth;
-        with (m = Math) C = cos, S = sin, P = pow, R = random; c.width = c.height = f = 600; h = -250; function p(a, b, c) { if (c > 60) return [S(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) - S(b) * 50, b * f + 50, 625 + C(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) + b * 400, a * 1 - b / 2, a]; A = a * 2 - 1; B = b * 2 - 1; if (A * A + B * B < 1) { if (c > 37) { n = (j = c & 1) ? 6 : 4; o = .5 / (a + .01) + C(b * 125) * 3 - a * 300; w = b * h; return [o * C(n) + w * S(n) + j * 610 - 390, o * S(n) - w * C(n) + 550 - j * 350, 1180 + C(B + A) * 99 - j * 300, .4 - a * .1 + P(1 - B * B, -h * 6) * .15 - a * b * .4 + C(a + b) / 5 + P(C((o * (a + 1) + (B > 0 ? w : -w)) / 25), 30) * .1 * (1 - B * B), o / 1e3 + .7 - o * w * 3e-6] } if (c > 32) { c = c * 1.16 - .15; o = a * 45 - 20; w = b * b * h; z = o * S(c) + w * C(c) + 620; return [o * C(c) - w * S(c), 28 + C(B * .5) * 99 - b * b * b * 60 - z / 2 - h, z, (b * b * .3 + P((1 - (A * A)), 7) * .15 + .3) * b, b * .7] } o = A * (2 - b) * (80 - c * 2); w = 99 - C(A) * 120 - C(b) * (-h - c * 4.9) + C(P(1 - b, 7)) * 50 + c * 2; z = o * S(c) + w * C(c) + 700; return [o * C(c) - w * S(c), B * 99 - C(P(b, 7)) * 50 - c / 3 - z / 1.35 + 450, z, (1 - b / 1.2) * .9 + a * .1, P((1 - b), 20) / 4 + .05] } } setInterval('for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}', 0)
-    </script>
+        <!-- <button class="navbtn2 nes-btn is-normal is-small mr-3" style="width: 30px; height: 30px;" type="button" data-toggle="collapse" data-target="#navbar">
+            <i class="nes-icon close is-small" style="position: relative; left: 5px; top: -3px;"></i>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbar">
+        <!-- 导航 -->
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item item-hide1"><a class="nav-link" href=".html">Minecraft官网</a></li>
+                <li class="nav-item item-hide1"><a class="nav-link" href=".html">Minecraft-wiki</a></li>
+                <li class="nav-item"><a class="nav-link" href="MirrorCity.html">主页</a></li>
+                <li class="nav-item item-hide2"><a class="nav-link" href=".html">MC下载</a></li>
+                <li class="nav-item item-hide2"><a class="nav-link" href=".html">关于我们</a></li>
+                <li class="nav-item item-hide2"><a class="nav-link" href=".html">社区事迹</a></li>
+                <li class="nav-item item-hide2"><a class="nav-link" href=".html">用人招募</a></li>
+                <li class="nav-item item-hide2"><a class="nav-link" href=".html">鸣谢</a></li>
+                <li class="nav-item end"><a class="nav-link" href=".html">赞助🧡</a></li>
+                <div class="dropdown">
+                    <button class=" navbtn2 nes-btn is-normal is-small" style="width: 30px; height: 30px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                        <i class="nes-icon close is-small" style="position: relative; left: 5px; top: -3px;"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Minecraft官网</a>
+                      <a class="dropdown-item" href="#">Minecraft-wiki</a>
+                      <a class="dropdown-item" href="#">MC下载</a>
+                      <a class="dropdown-item" href="#">关于我们</a>
+                      <a class="dropdown-item" href="#">社区事迹</a>
+                      <a class="dropdown-item" href="#">用人招募</a>
+                      <a class="dropdown-item" href="#">鸣谢</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button class=" navbtn3 nes-btn is-normal is-small" style="width: 30px; height: 30px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                        <i class="nes-icon close is-small" style="position: relative; left: 5px; top: -3px;"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">MC下载</a>
+                      <a class="dropdown-item" href="#">关于我们</a>
+                      <a class="dropdown-item" href="#">社区事迹</a>
+                      <a class="dropdown-item" href="#">用人招募</a>
+                      <a class="dropdown-item" href="#">鸣谢</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <p style="height: 50px;">&nbsp;</p>
+    <nav class="fixed-top nav-bg" style="width: 100%;">
+        <div class="d-flex justify-content-center">
+            <div style="width: 50px;background-image: url(images/head.png);background-repeat: no-repeat;background-position: right;">
+            </div>
+            <div style="width: 90%;height: 50px ;background-image: url(images/body.png);"></div>
+            <div style="width: 50px;background-image: url(images/foot.png);background-repeat: no-repeat;background-position: left;">
+            </div>
+        </div>
+    </nav>
+    <!-- content -->
+     <div class="" style="width: 90%;height: 1400px; background-image: url(images/bgimg.png);background-size: 100%;background-repeat: no-repeat;">
+        <div class="">
+            
+        </div>
+     </div>
 </body>
-
 </html>
